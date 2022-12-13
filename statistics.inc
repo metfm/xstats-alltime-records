@@ -4,7 +4,7 @@
 #errorCatcher Echo
 #encoding UTF-8
 
-#set $archive_data = [$day, $week, $month, $year, $alltime]
+#set $archive_data = [$yesterday, $day, $week, $month, $year, $alltime]
 
 <div id="statistics_widget" class="widget">
   <div class="widget_title">
@@ -17,6 +17,7 @@
         <tr>
           <td></td>
           <td></td>
+          <th class="hilo_yesterday">χθές</th>
           <th>Ημέρας</th>
           <th class="hilo_week">Εβδομάδας</th>
           <th class="hilo_month">Mήνα</th>
@@ -115,7 +116,7 @@
           <td class="label">Mέγιστη Ριπή</td>
           <td class="units">
             $unit.label.wind<br/>
-            
+
           </td>
           #for $archive in $archive_data
           <td class="data new_row">
@@ -148,7 +149,7 @@
           </td>
           <td class="units">
             $unit.label.wind<br/>
-            
+
           </td>
           #for $archive in $archive_data
           <td class="data new_row">
@@ -266,4 +267,5 @@
     </table>
 
   </div>
+</div>
 </div>
